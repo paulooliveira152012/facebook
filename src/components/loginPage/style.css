@@ -87,3 +87,6 @@ form a {
     margin-bottom: 0;
 }
 
+.right span {
+    font-weight: bold;
+}

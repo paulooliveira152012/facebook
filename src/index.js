@@ -6,15 +6,20 @@ import reportWebVitals from './reportWebVitals';
 // import loginPage from './'
 import Left from './components/loginPage/left'
 import Right from './components/loginPage/right'
+import Footer from './components/loginPage/footer';
 
 function MyApp() {
   return (
-      <main>
-        <div className='mainContainer'>
-          <Left />
-          <Right />
+      <><main>
+      <div className='mainContainer'>
+        <Left />
+        <Right />
       </div>
-      </main>
+
+    </main>
+    <Footer />
+    
+    </>
   );
 }
 

@@ -12,6 +12,7 @@ function Right() {
                 <div className="line"></div>
                 <button id="signup">Create new account</button>
             </form>
+            <p><span>Create a Page </span> for a celebrity, brand or business.</p>
         </div>
     )
 }
