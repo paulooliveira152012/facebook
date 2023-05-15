@@ -15,7 +15,6 @@ function MyApp() {
         <Left />
         <Right />
       </div>
-
     </main>
     <Footer />
     
