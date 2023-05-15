@@ -1,5 +1,4 @@
 import React from "react";
-// import SignUpForm from "./SignUpForm";
 import SignUpForm from "./signUpForm";
 
 function signUpModal(props) {

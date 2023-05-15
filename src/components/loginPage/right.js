@@ -7,9 +7,10 @@ import './style.css';
 function Right() {
     const [showModal, setShowModal] = useState(false);
 
-    const handleSignUpClick = () => {
+    const handleSignUpClick = (event) => {
+        event.preventDefault()
         setShowModal(true)
-    }
+    };
 
     return (
         <div className="right">
@@ -20,6 +21,7 @@ function Right() {
                 <a href="">Forgot password?</a>
                 <div className="line"></div>
                 <button id="signup" onClick={handleSignUpClick}>Create new account</button>
+                {showModal && <SignUpForm onClose={() => setShowModal(false)} />}
             </form>
         </div>
     )

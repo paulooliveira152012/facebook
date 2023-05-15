@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function SignUpForm() {
+function SignUpForm({ onClose }) {
     return (
         <div className="signUp">
-            <h2>Sign Up</h2>
+            <h2>Sign Up</h2> <span>X</span>
             <p>It's quick and easy</p>
             <div className="line"></div>
             <div className="name">
