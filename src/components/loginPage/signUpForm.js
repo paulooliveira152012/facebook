@@ -1,12 +1,21 @@
 import React from "react";
 import "./style.css";
+import x from "../../assets/images/x.png"
 
 function SignUpForm({ onClose }) {
     return (
         <div className="signUp">
-            <h2>Sign Up</h2> <span>X</span>
-            <p>It's quick and easy</p>
+            <div className="top">
+                <h2>Sign Up</h2> <img src={x} onClick={onClose}></img>
+                <p>It's quick and easy</p>
+            </div>
+
             <div className="line"></div>
+            
+            <div className="bottom">
+
+            </div>
+            
             <div className="name">
                 <div className="firstName">
                     <div>
