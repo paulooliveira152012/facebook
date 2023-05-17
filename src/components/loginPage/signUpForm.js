@@ -52,8 +52,8 @@ function SignUpForm({ onClose }) {
                     ></input>
                 </div>
 
+                <a className="title">Birthday</a> 
                 <div className="birthday">
-                    <p>Birthday</p> 
                     <div className="dates">
                         <select>
                             <option value="1">Jan</option>
@@ -69,6 +69,25 @@ function SignUpForm({ onClose }) {
                             <option value="11">Nov</option>
                             <option value="12">Dec</option>
                         </select>
+                       
+                        <select value="1">
+                            {Array.from({length: 31}, (_, i) => 1 + i).map((day) => (
+                                <option value={day}>{day}</option>
+                            ))}
+                        </select>
+
+                        <select value="2023">
+                            {Array.from({length: 119}, (_, i) => 2023 - i).map((year) => (
+                                <option value={year}>{year}</option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
+
+                <a className="title">Gender</a>
+                <div className="genders">
+                    <div className="gender">
+                        <label>Female</label>
                     </div>
                 </div>
 

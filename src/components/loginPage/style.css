@@ -186,6 +186,43 @@ form a {
     padding: 11px;
 }
 
+.signUp .dates {
+    width: 399px;
+    height: 36px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.signUp select {
+    border-radius: 4px;
+    color: #1c1e21;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 34px;
+    width: 126px;
+    padding: 0px 20px 0px 8px;
+    line-height: 20px;
+}
+
+.signUp .title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #606770;
+    margin-left: 0;
+}
+
+i {
+    background-image: url("../../assets/images/symbols.png");
+    background-size: 22px 178px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
 /* .signUp  */
 
 @media screen and (max-width:900px) {
