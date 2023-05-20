@@ -46,6 +46,7 @@ form input {
     cursor: pointer;
     border:none ;
     font-size: 20px;
+    height: 48px;
   }
 
   form #login {
@@ -57,9 +58,11 @@ form input {
     background-color: #42b72a;
     color: white;
     width: 60%;
+    height: 100%;
     margin: 0;
     margin: auto;
     margin-top: 20px;
+    height: 48px;
   }
   
 
@@ -109,7 +112,7 @@ form a {
   
   .modal {
     width: 440px;
-    height: 400px;
+    height: 550px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -187,7 +190,7 @@ form a {
 }
 
 .signUp .dates {
-    width: 399px;
+    /* width: 399px; */
     height: 36px;
     display: flex;
     justify-content:space-between;
@@ -222,6 +225,76 @@ i {
     height: 20px;
     width: 20px;
 }
+
+/* .genders {
+    display: flex;
+    flex-wrap: wrap;
+    width: 411px;
+} */
+
+.title {
+    display: block;
+    left: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.gender {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender span {
+    box-sizing: border-box;
+    /* background-color: red; */
+    /* border: 1px 1px solid black; */
+    /* padding: 20px; */
+    /* margin: 10px; */
+    border: 1px solid #dddfe2;
+    /* padding: 10px; */
+    /* width: 89px; */
+    flex: 1;
+    padding: 0 0px 0 10px;
+    /* background-color: green; */
+    max-width: 128px;
+    /* padding: ; */
+    height: 40px;
+    line-height: 36px;
+    border-radius: 4px;
+}
+
+.gender input {
+    right: 10px;
+    float: right;
+    height: 28px;
+}
+
+.bottom p {
+    font-size: 11px;
+    margin: 11px 0;
+}
+
+.bottom a {
+    margin: 0;
+}
+
+.signUpButton {
+    display: flex;
+    justify-content: center;
+}
+
+.signUpButton button {
+    background-color: #00a400;
+    color: white;
+    width: 194px;
+    height: 36px;
+    line-height: 8px;
+}
+
+
+
+
 
 /* .signUp  */
 

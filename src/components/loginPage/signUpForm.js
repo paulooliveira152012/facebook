@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import "../../functions/users"
 import x from "../../assets/images/x.png"
 
 function SignUpForm({ onClose }) {
@@ -22,6 +23,7 @@ function SignUpForm({ onClose }) {
                             className="inputName"
                             name="firstName"
                             placeholder="First name"
+                            id="firstName"
                             ></input>
                             </div>
                     </div>
@@ -85,12 +87,33 @@ function SignUpForm({ onClose }) {
                 </div>
 
                 <a className="title">Gender</a>
+                
                 <div className="genders">
                     <div className="gender">
-                        <label>Female</label>
+                        <span>
+                            <label>Female</label>
+                            <input type="radio"></input>
+                        </span>
+
+                        <span>
+                            <label>Male</label>
+                            <input type="radio"></input>
+                        </span>
+
+                        <span>
+                            <label>Custom</label>
+                            <input type="radio"></input>
+                        </span>
+                        
                     </div>
                 </div>
 
+                <p>People who use our service may have uploaded your contact information to Facebook. <a href="">Learn more</a>.</p>
+                <p>By clicking Sign Up, you agree to our<a href=""> Terms, Privacy Policy</a> and<a href="">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
+
+                <div className="signUpButton">
+                <button id="signUpBtn">Sign Up</button>
+                </div>
             </div>
             
         </div>
