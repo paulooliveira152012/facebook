@@ -5,7 +5,8 @@ import SignUpForm from "../components/loginPage/signUpForm";
 function SignUp() {
   const [showSignUpForm, setShowSignUpForm] = useState(false);
 
-  const handleSignUpClick = () => {
+  const handleSignUpClick = (e) => {
+    e.preventDefault()
     setShowSignUpForm(true);
   };
 

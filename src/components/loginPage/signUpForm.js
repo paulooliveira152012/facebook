@@ -1,13 +1,20 @@
 import React from "react";
 import "./style.css";
-import "../../functions/users"
 import x from "../../assets/images/x.png"
+//document which contains functions to 
+
 
 function SignUpForm({ onClose }) {
+    const handleSignUp = () => {
+        const firstNameInput = document.getElementById("firstName");
+        const firstNameValue = firstNameInput.value;
+        console.log(firstNameValue)
+    };
+    
     return (
         <div className="signUp">
             <div className="top">
-                <h2>Sign Up</h2> <img src={x} onClick={onClose}></img>
+                <h2>Sign Up</h2> <img src={x} onClick={onClose} alt="Close"></img>
                 <p>It's quick and easy</p>
             </div>
 
@@ -112,7 +119,7 @@ function SignUpForm({ onClose }) {
                 <p>By clicking Sign Up, you agree to our<a href=""> Terms, Privacy Policy</a> and<a href="">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.</p>
 
                 <div className="signUpButton">
-                <button id="signUpBtn">Sign Up</button>
+                <button id="signUpBtn" onClick={handleSignUp}>Sign Up</button>
                 </div>
             </div>
             
