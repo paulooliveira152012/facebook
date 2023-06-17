@@ -1,13 +1,21 @@
-const express = require('express');
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 5000;
 const MongoClient = require('mongodb').MongoClient;
+const cors = require("cors")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ estended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
 const uri = 'mongodb://localhost:27017'; // MongoDB connection string
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri, { 
+  useNewUrlParser: true, 
+  useUnifiedTopology: true 
+});
 
 client.connect((err) => {
   if (err) {
@@ -19,19 +27,23 @@ client.connect((err) => {
   const db = client.db('facebook_users'); 
 
   app.post('/signup', (req, res) => {
-    const { name, email, password } = req.body;
+    const { firstName, email, password } = req.body;
 
     // Implement signup logic here
     // Example: Create a new user document in the MongoDB collection
 
-    db.collection('users').insertOne({ name, email, password }, (err) => {
-      if (err) {
-        console.error('Failed to insert user:', err);
-        res.status(500).send('Failed to create an account');
-        return;
+    db.collection('users').insertOne(
+      { firstName, email, password }, 
+      (err) => {
+        if (err) {
+          console.error('Failed to insert user:', err);
+          res.status(500).send('Failed to create an account');
+          return;
+        }
+        window.alert("account created")
+        res.status(200).send('Account created successfully');
       }
-      res.status(200).send('Account created successfully');
-    });
+    );
   });
 
   app.post('/signin', (req, res) => {

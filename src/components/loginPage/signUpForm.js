@@ -1,14 +1,40 @@
-import React from "react";
+// import React from "react";
 import "./style.css";
 import x from "../../assets/images/x.png"
-//document which contains functions to 
+// import useState hook from React
+import React, { useState } from "react";
+import axios from "axios";
 
 
 function SignUpForm({ onClose }) {
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    // const [emailPhone, setEmailPhone] = useState("");
+
     const handleSignUp = () => {
         const firstNameInput = document.getElementById("firstName");
         const firstNameValue = firstNameInput.value;
+        
+
         console.log(firstNameValue)
+
+        axios
+            .post("/signup", {
+                firstName: firstNameValue,
+                email: email,
+                password: password,
+            })
+            .then((response) => {
+                console.log(response.data); //handle success response
+                // add code to handle success signup
+            })
+            .catch((error) => {
+                console.error(error); //handle error
+                // add code to handle signup error
+            })
     };
     
     return (
@@ -31,6 +57,8 @@ function SignUpForm({ onClose }) {
                             name="firstName"
                             placeholder="First name"
                             id="firstName"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
                             ></input>
                             </div>
                     </div>
@@ -41,15 +69,22 @@ function SignUpForm({ onClose }) {
                             className="inputName"
                             name="lastName"
                             placeholder="Last name"
-                            ></input>                            </div>
-                        </div>
+                            id="lastName"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            ></input>                            
+                            </div>
+                    </div>
                 </div>
 
-                <div className="emailPhone">
+                <div className="email">
                     <input 
                     type="text" 
                     className="email" 
                     placeholder="Mobile number or email"
+                    id="emailPhone"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     ></input>
                 </div>
 
@@ -58,6 +93,9 @@ function SignUpForm({ onClose }) {
                     type="text" 
                     className="pass" 
                     placeholder="New password"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     ></input>
                 </div>
 
